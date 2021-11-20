@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>KNN Algorithms Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chart-container"><canvas id="myChart"></canvas></div>
+
+      <div class="choose-container">
+        <div class="select-container">
+          <label for="xValue" class="label">Choose X value:</label>
+          <select name="xValue" id="xValue" class="select">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <label for="yValue" class="label">Choose Y value:</label>
+          <select name="yValue" id="yValue" class="select">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <button id="xy" class="btn">Add</button>
+      </div>
+      <div class="calc-select-container">
+        <div class="select-container">
+          <label for="KNNValue" class="label">Choose KNN value:</label>
+          <select name="KNNValue" id="KNNValue" class="select">
+            <option value="1" selected>1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <button id="knn" class="btn">Update</button>
+      </div>
+
+      <div class="calc-alg-speed">
+        <div class="calc-alg">
+          <label class="label">Manhattan Time:</label>
+          <div id="m-time" class="time">0.00</div>
+        </div>
+        <div class="calc-alg">
+          <label class="label">Euclidean Time:</label>
+          <div id="e-time" class="time">0.00</div>
+        </div>
+      </div>
+
+      <div class="algo-select-container">
+        <div class="select-container">
+          <label for="algoValue" class="label">Choose KNN algorithm:</label>
+          <select name="algoValue" id="algoValue" class="select">
+            <option value="euclidean" selected>Euclidean</option>
+            <option value="manhattan">Manhattan</option>
+          </select>
+        </div>
+        <button id="update" class="btn">Update</button>
+      </div>
+
+      <div class="class-container">
+        <div class="show-class">
+          <label class="label">Manhattan class:</label>
+          <div id="mClass" class="iClass">unknown</div>
+        </div>
+        <div class="show-class">
+          <label class="label">Euclidean class:</label>
+          <div id="eClass" class="iClass">unknown</div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="chartConfig.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </body>
+</html>
